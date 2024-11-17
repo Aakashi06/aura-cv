@@ -1,0 +1,340 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding-top: 20px;;
+    background-color: #57609d;
+    text-align: center;
+}
+
+
+
+/* Header Styles with Video Background and Logo */
+header {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Set a fixed height for consistency */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 20px; /* Adjust padding to make room for the logo */
+}
+
+
+/* Video Background Styling */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place the video behind the content */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire section */
+}
+
+/* Logo Styling */
+.logo {
+    position: relative;
+    z-index: 1; /* Ensure the logo is above the video */
+    margin-bottom: 20px; /* Space between the logo and the content */
+}
+
+.logo img {
+    width: 220px; /* Adjust the width of the logo as needed */
+    height: auto;
+    display: block;
+}
+
+/* Header Content Styling */
+.header-content {
+    position: relative;
+    z-index: 1; /* Ensure the content appears above the video */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px); /* Optional: blur effect for better readability */
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #f3e8e4; /* Darker shade on hover */
+}
+
+
+
+
+
+header h1 {
+    font-family: cursive;
+    color:#333;
+    height:30px;
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+}
+
+header p {
+    font-family: cursive;
+    font-size: 1.2rem;
+    margin-top:20px;
+    margin-bottom: 20px;
+    color:rgb(24, 20, 20);
+}
+
+
+
+.logo img{
+    color:black;
+    height:100px;
+    margin-left:0px ;
+}
+
+.cta-button {
+    height:100px;
+    padding: 10px 20px;
+    background-color: #5a4d4a;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #493d3b;
+}
+
+/* Hero Section Styles */
+#hero {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Adjust height as needed */
+    background: url('../images/hero-bg.jpg') no-repeat center center; /* Background image */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Hero Content Styling */
+.hero-content {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+}
+
+/* Hero Text Styles */
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    animation: slideDown 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 30px;
+    margin-bottom: 30px;
+    animation: slideUp 1s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/* Template section */
+
+/* Glassy Button Styles */
+.glassy-button {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px;
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    font-weight: bold;
+}
+
+/* Hover and Active Effects */
+.glassy-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+.glassy-button:active {
+    transform: translateY(2px); /* Slight push down effect */
+}
+
+/* Template Section Styling */
+#templates {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#templates h3{
+    font-size: 50px;
+}
+
+.filter-options {
+    display: flex;
+    color:black;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.template-card {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.template-card:hover {
+    transform: scale(1.05);
+}
+
+.template-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.template-category {
+    font-weight: bold;
+    color: #555;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.template-card p {
+
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.template-button {
+    padding: 8px 16px;
+    background-color: #ff7e5f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.template-button:hover {
+    transform: scale(1.1);
+    background-color: #e57050;
+}
+
+.preview-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.template-card:hover .preview-button {
+    opacity: 1;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b0f31;
+    color: #fff;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
