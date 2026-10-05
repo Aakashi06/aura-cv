@@ -4,8 +4,7 @@
 
 **Craft your dream CV. A few clicks. A lasting first impression.**
 
-A cinematic template gallery for people who refuse to ship a boring resume.
-Pick a look, open the editor, and start writing.
+A curated template gallery with a cinematic landing, three distinct styles, and a one-click path into the editor.
 
 <br />
 
@@ -17,7 +16,7 @@ Pick a look, open the editor, and start writing.
 
 <br />
 
-[Live demo](https://aura-cv-pi.vercel.app/) · [Report a bug](https://github.com/Aakashi06/aura-cv/issues) · [Author](https://github.com/Aakashi06)
+[Live demo](https://aura-cv-pi.vercel.app/) · [Source](https://github.com/Aakashi06/aura-cv) · [Author](https://github.com/Aakashi06)
 
 </div>
 
@@ -25,47 +24,43 @@ Pick a look, open the editor, and start writing.
 
 ## What it does
 
-Aura CV is a front door for a curated set of resume templates. The page opens on a full-bleed video header, drops you into a filterable gallery, and hands the actual editing off to Canva.
-
-No account wall. No form maze. Choose a voice — modern, minimal, or aesthetic — then hit **Start Creating Your CV**.
+Aura CV opens on a full-bleed video header, then hands you a filterable gallery of crafted resume templates. Pick a voice — modern, minimal, or aesthetic — and **Start Creating Your CV** opens that design in Canva.
 
 ```text
 land  →  filter a style  →  preview a card  →  open the editor
 ```
 
 <p align="center">
-  <img width="32%" alt="Aura CV — hero and first impression" src="https://github.com/user-attachments/assets/926d1078-8b77-4b76-a597-45b0b1b295d2" />
-  <img width="32%" alt="Aura CV — template gallery" src="https://github.com/user-attachments/assets/f8cbeb86-a90a-4de8-9a00-6b83d67c4c9b" />
-  <!-- <img width="32%" alt="Aura CV — third screenshot" src="PASTE_THIRD_SCREENSHOT_URL_HERE" /> -->
+  <img width="48%" alt="Aura CV hero" src="https://github.com/user-attachments/assets/926d1078-8b77-4b76-a597-45b0b1b295d2" />
+  <img width="48%" alt="Aura CV template gallery" src="https://github.com/user-attachments/assets/f8cbeb86-a90a-4de8-9a00-6b83d67c4c9b" />
 </p>
 
 <p align="center">
-  <sub>Hero · gallery. Uncomment the third image to sit another shot in the same row.</sub>
+  <sub>Hero · template gallery</sub>
 </p>
 
 ---
 
 ## Features
 
-- **Cinematic landing.** Looping video background, logo lockup, and a single CTA: *Start Creating Your CV*.
-- **Three curated lanes.** Modern, Minimalistic, and Aesthetic — plus an All view.
-- **Glass filter bar.** Category buttons toggle the grid without a reload.
-- **Named templates, not generic slots.** Each card has a style name, a category tag, and a preview.
-- **One-click handoff.** *Start Creating Your CV* opens the matching Canva design in a new tab.
-- **Static and fast.** HTML, CSS, and a small vanilla script. No framework tax on the gallery.
-- **Deployed.** Live on Vercel at [aura-cv-pi.vercel.app](https://aura-cv-pi.vercel.app/).
+- **Cinematic landing.** Looping video background, logo lockup, and a clear call to action.
+- **Three curated lanes.** Modern, Minimalistic, and Aesthetic, plus an All view.
+- **Instant filters.** Glass buttons switch the grid in place, with no reload.
+- **Named templates.** Every card carries a style name, a category tag, and a preview.
+- **One-click editing.** Each card opens its matching Canva design in a new tab.
+- **Light and fast.** HTML, CSS, and a small vanilla script. Live on Vercel.
 
 ---
 
 ## Template lanes
 
-| Lane | The brief | A few of the looks |
+| Lane | The brief | Looks |
 | --- | --- | --- |
-| **Modern** | Structure with a pulse. Good for product, engineering, and ops. | The Fresh Format, Creative Canvas, Infographic Innovator, Professional Palette, Contemporary Classic, Bold & Bright |
-| **Minimalistic** | Type, whitespace, nothing extra. Good when the work should speak. | Sleek Simplicity, The Quiet Professional, Pure Precision, The Clean Cut, Whitespace Wonder, Chic Clarity |
+| **Modern** | Structured layouts with a pulse. Strong for product, engineering, and ops. | The Fresh Format, Creative Canvas, Infographic Innovator, Professional Palette, Contemporary Classic, Bold & Bright |
+| **Minimalistic** | Type and whitespace, kept precise. Strong when the work should speak. | Sleek Simplicity, The Quiet Professional, Pure Precision, The Clean Cut, Whitespace Wonder, Chic Clarity |
 | **Aesthetic** | Identity-forward layouts for design, content, and freelance work. | The Aesthetic Advocate, Artistic Touch, The Modern Artisan, Crafted Identity, The Artful Resume, Visual Vignettes |
 
-Filters are driven by a class on each card (`modern`, `minimalist`, `aesthetic`) and a `data-filter` on the button.
+Each card uses a category class (`modern`, `minimalist`, `aesthetic`). Filter buttons read `data-filter` and show the matching set.
 
 ---
 
@@ -74,10 +69,10 @@ Filters are driven by a class on each card (`modern`, `minimalist`, `aesthetic`)
 | Layer | Choice |
 | --- | --- |
 | Markup | HTML5 |
-| Styling | CSS, glassy filter controls, responsive grid |
+| Styling | CSS, glass controls, responsive grid |
 | Behavior | Vanilla JavaScript (`public/js/main.js`) |
-| Media | Looping header video, logo, template previews |
-| Editing | Canva design links, opened in a new tab |
+| Media | Header video, logo, template previews |
+| Editing | Canva designs, opened in a new tab |
 | Hosting | Vercel |
 
 ---
@@ -87,12 +82,12 @@ Filters are driven by a class on each card (`modern`, `minimalist`, `aesthetic`)
 ```text
 aura-cv/
 ├── public/
-│   ├── index.html          # hero, filters, template grid
-│   ├── css/style.css       # layout, glass buttons, cards
-│   ├── js/main.js          # filter + open-in-new-tab
-│   └── images/             # logo, video, template previews
+│   ├── index.html        # hero, filters, template grid
+│   ├── css/style.css     # layout, glass buttons, cards
+│   ├── js/main.js        # filter + open in a new tab
+│   └── images/           # logo, video, template previews
 ├── server/
-│   └── server.js           # optional node entry
+│   └── server.js
 └── README.md
 ```
 
@@ -100,29 +95,27 @@ aura-cv/
 
 ## Run it locally
 
-The gallery is static. From the repo root:
-
 ```bash
 git clone https://github.com/Aakashi06/aura-cv.git
 cd aura-cv/public
 python3 -m http.server 5173
 ```
 
-Then open [http://localhost:5173](http://localhost:5173).
+Open [http://localhost:5173](http://localhost:5173).
 
-Node is fine too, if you already have it:
+Or with Node:
 
 ```bash
 npx serve public
 ```
 
-The video and images are referenced relatively (`images/video.mp4`, `images/logo.png`, `images/mod1.png`, …), so serve `public/` — do not open `index.html` as a `file://` URL if you want the media to behave.
+Serve the `public/` folder so the video and previews resolve (`images/video.mp4`, `images/logo.png`, `images/mod1.png`).
 
 ---
 
-## How a template gets wired
+## Add a template
 
-Each card is a small, dumb unit. The button does not know about Canva. It only reads `data-link`.
+A card is a preview, a name, and a link. The button only reads `data-link`.
 
 ```html
 <div class="template-card modern">
@@ -135,46 +128,23 @@ Each card is a small, dumb unit. The button does not know about Canva. It only r
 </div>
 ```
 
-`main.js` does two jobs:
+`main.js` does two things:
 
-1. Show or hide `.template-card` nodes from the active filter.
-2. `window.open(link, "_blank")` when a template button is clicked.
+1. Shows the cards that match the active filter.
+2. Opens the card link in a new tab.
 
-To add a template: drop a preview in `public/images/`, copy a card, set the category class, and paste the Canva view link into `data-link`.
-
----
-
-## Scripts, in one place
-
-| File | Responsibility |
-| --- | --- |
-| `public/index.html` | Video header, hero copy, filter buttons, template grid |
-| `public/css/style.css` | Hero, glassy buttons, card grid |
-| `public/js/main.js` | Filter state and external editor links |
-| `server/server.js` | Optional server entry, separate from the static gallery |
+Drop a preview into `public/images/`, copy a card, set the category class, and paste the Canva view link into `data-link`.
 
 ---
 
-## Deploy
+## Live
 
-The live site is [https://aura-cv-pi.vercel.app/](https://aura-cv-pi.vercel.app/).
+[https://aura-cv-pi.vercel.app/](https://aura-cv-pi.vercel.app/)
 
-On Vercel, set the output / root to `public` if the platform is serving the static gallery. Push to `main` and the demo follows.
-
----
-
-## Roadmap
-
-- [ ] Third gallery screenshot in the README row
-- [ ] In-page preview before the Canva hop
-- [ ] Search across template names
-- [ ] Dark / light theme toggle
-- [ ] ATS-friendly notes on each card
+Point the Vercel root at `public`. Pushes to `main` update the demo.
 
 ---
 
 ## Author
 
 Built by [Aakashi06](https://github.com/Aakashi06).
-
-If a template link dies or a preview looks off, open an issue — the card and the Canva design are the whole product.
